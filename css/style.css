@@ -1,0 +1,92 @@
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas: 
+    ".... head ...."
+    ".... main ...."
+    ".... foot ....";
+    ;
+    gap: 1em;
+
+}
+.site-header {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+
+}
+.title-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+   font-weight: 800;
+   font-size: 1.125em;
+}
+.title-ico {
+    
+}
+.btn {
+    background:none;
+    color: #090909;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 0.950em;
+}
+.home{
+    grid-area: home;
+
+}
+.about{
+    grid-area: about;
+
+}
+
+footer {
+    display: grid;
+    grid-area: foot;
+    background-color: #202020;
+    color: #ECECEC;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 
+    "cove"
+    "cove"
+    "blog"
+    "blog"
+    "blog"
+    "blog";
+    gap: 1em;
+}
+.cover-article {
+    background-image: url("/images/article-image.png");
+    background-size: cover;
+    grid-area: cove;
+
+}
+.article-blog {
+    grid: blog;
+}
+.article-blog img{
+    width: 100%;
+    max-width: 800px;
+}
