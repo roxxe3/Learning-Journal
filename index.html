@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>My Learning Journal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,37 +15,54 @@
                 <h4 class="title">My learning journal</h4>
             </div>
             <nav>
-                <button class="home btn">HOME</button>
-                <button class="about btn">ABOUT ME</button>
+                <a href="/" class="home btn">HOME</a>
+                <a href="/about" class="about btn">ABOUT ME</a>
             </nav>
         </header>
-        <main>
-            <article class="cover-article">
-
+        <article class="cover-article">
+            <p class="date">JULY 23, 2022</p>
+            <h2>My new journey as a bootcamp student.</h2>
+            <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+        </article>
+        <main class="container">
+            <article class="article-blog">
+                <img src="images/post-img-01.jpg"> 
                 <p>JULY 23, 2022</p>
-                <h2>My new journey as a bootcamp student.</h2>
-                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+                <h2 class="blog-title">Blog one</h2>
+                <p class="blog-text">I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
             </article>
             <article class="article-blog">
-                <img src="images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg"> 
-                <p>JULY 23, 2022</p>
-                <h2>Blog one</h2>
-                <p>I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.</p>
+                <img src="images/post-img-02.jpg"> 
+                <p >JULY 23, 2022</p>
+                <h2 class="blog-title">Blog 2</h2>
+                <p class="blog-text">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
             </article>
             <article class="article-blog">
-                <img src="images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg"> 
+                <img src="images/post-img-03.jpg"> 
                 <p>JULY 23, 2022</p>
-                <h2>My new journey as a bootcamp student.</h2>
-                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+                <h2 class="blog-title">Blog three</h2>
+                <p class="blog-text">After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
             </article>
             <article class="article-blog">
-                <img src="images/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg"> 
-                <p>JULY 23, 2022</p>
-                <h2>My new journey as a bootcamp student.</h2>
-                <p>After several months of learning in the Frontend Developer Career Path, I've made the big jump over to the Bootcamp to get expert code reviews of my Solo Projects projects and meet like-minded peers.</p>
+                <img src="images/post-img-04.jpg" alt="Programming setup"> 
+                <p class="date">JULY 24, 2022</p>
+                <h2 class="blog-title">My Programming Setup</h2>
+                <p class="blog-text">As a new developer, I've learned that having the right setup can make a huge difference in productivity. Here's a look at my current workspace and tools.</p>
             </article>
-            <button>View More</button>
+            <article class="article-blog">
+                <img src="images/post-img-05.jpg" alt="JavaScript concepts"> 
+                <p class="date">JULY 25, 2022</p>
+                <h2 class="blog-title">Understanding JavaScript Promises</h2>
+                <p class="blog-text">One of the most challenging concepts I've tackled so far is asynchronous JavaScript. Here's my journey in understanding Promises and async/await.</p>
+            </article>
+            <article class="article-blog">
+                <img src="images/post-img-06.jpg" alt="CSS Grid layout"> 
+                <p class="date">JULY 26, 2022</p>
+                <h2 class="blog-title">Mastering CSS Grid</h2>
+                <p class="blog-text">CSS Grid has revolutionized how we handle layouts on the web. Here's what I've learned about creating responsive designs with Grid.</p>
+            </article>
         </main>
+        <a href="#" class="view-more">View more</a>
         <footer>
             <h6>My Learning Journal</h6>
             <p>Copyright ©2022</p>

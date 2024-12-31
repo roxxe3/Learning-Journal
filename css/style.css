@@ -1,92 +1,233 @@
+/* Reset Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-html, 
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
+}
+
+/* Base Typography */
+p {
+    line-height: 1.3;
+}
+
+img {
+    border-radius: 5px;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 body {
     display: grid;
     grid-template-columns: 1em 1fr 1em;
     grid-template-areas: 
-    ".... head ...."
-    ".... main ...."
-    ".... foot ....";
-    ;
+        "head head head"
+        "cover cover cover"
+        "main main main"
+        "... view ...."
+        "foot foot foot";
     gap: 1em;
-
 }
+
+/* Header Styles */
 .site-header {
     grid-area: head;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    padding: 0.2em 0;
+    height: 45px;
 }
+
 .title-div {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 0.3em;
 }
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .title {
-   font-weight: 800;
-   font-size: 1.125em;
-}
-.title-ico {
-    
-}
-.btn {
-    background:none;
-    color: #090909;
-    border: none;
-    cursor: pointer;
     font-weight: 700;
-    font-family: inherit;
-    font-size: 0.950em;
-}
-.home{
-    grid-area: home;
-
-}
-.about{
-    grid-area: about;
-
+    font-size: 1.2em;
 }
 
-footer {
-    display: grid;
-    grid-area: foot;
-    background-color: #202020;
-    color: #ECECEC;
+.title-ico {
+    width: 24px;
+    height: auto;
 }
+
+/* Navigation */
+.btn {
+    color: #090909;
+    font-weight: 700;
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    text-decoration: none;
+}
+
+/* Featured Article (Cover) */
+.cover-article {
+    grid-area: cover;
+    background-image: url("/images/article-image.png");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1em;
+}
+
+.cover-article h2,
+.cover-article p {
+    margin: 0;
+}
+
+.cover-article h2 {
+    font-size: 2em;
+}
+
+/* Blog Articles */
 main {
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: 
-    "cove"
-    "cove"
-    "blog"
-    "blog"
-    "blog"
-    "blog";
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
 }
-.cover-article {
-    background-image: url("/images/article-image.png");
-    background-size: cover;
-    grid-area: cove;
 
-}
-.article-blog {
-    grid: blog;
-}
-.article-blog img{
+.article-blog img {
     width: 100%;
-    max-width: 800px;
+    margin-bottom: 1em;
+}
+
+.blog-title {
+    margin: 0.1em 0;
+    font-size: 1.5rem;
+}
+
+.blog-text {
+    color: #505050;
+}
+
+.date {
+    font-size: 0.75em;
+}
+
+/* Call to Action */
+.view-more {
+    grid-area: view;
+    display: inline-block;
+    padding: 0.5em 1em;
+    width: fit-content;
+    margin: 1em auto;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.950em;
+    background-color: #090909;
+    color: #ECECEC;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    grid-area: foot;
+    background-color: #202020;
+    color: #ECECEC;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+footer h6 {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.75em;
+    opacity: 0.8;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .cover-article {
+        min-height: 300px;
+        background-position: center bottom;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        height: 40px;
+        padding: 0.2em 0.4em;
+    }
+    
+    .title-ico {
+        width: 22px;
+    }
+    
+    .title {
+        font-size: 0.8em;
+    }
+    
+    .btn {
+        font-size: 0.75em;
+        padding: 0.2em 0.4em;
+    }
+    
+    footer {
+        padding: 0.75em 0;
+    }
+}
+@media (min-width: 769px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+
+    .article-blog {
+        margin-bottom: 0;
+    }
+
+    .cover-article {
+        min-height: 500px;
+        padding: 4em;
+        background-position: center;
+    }
+
+    .cover-article h2 {
+        font-size: 2.5em;
+    }
+
+    .cover-article p {
+        font-size: 1.1em;
+        max-width: 60ch;
+    }
+
+    .site-header {
+        padding: 0.5em 2em;
+    }
+
+    .title {
+        font-size: 1.2em;
+
+
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 0.5em 1em;
+    }
+
 }
